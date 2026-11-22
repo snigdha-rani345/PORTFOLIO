@@ -257,33 +257,24 @@ function renderProject(projectKey) {
     </div>
 
     <div class="evidence-area">
-      <h3>07 / EVIDENCE &amp; PROJECT RESOURCES</h3>
+  <h3>07 / EVIDENCE &amp; PROJECT RESOURCES</h3>
 
-      <div class="evidence-grid">
-        ${evidence}
+  <div class="evidence-grid">
+    ${evidence}
 
-        <div class="evidence-slot">
-          <b>GitHub repository</b>
-          <span>ADD REPOSITORY URL</span>
-        </div>
-
-        <div class="evidence-slot">
-          <b>Technical write-up</b>
-          <span>ADD WRITE-UP URL</span>
-        </div>
-
-        <div class="evidence-slot">
-          <b>Demo / documentation</b>
-          <span>ADD DEMO OR DOCS</span>
-        </div>
-      </div>
-
-      <p class="evidence-note">
-        Evidence slots are intentional placeholders. Add your own repository
-        URLs, screenshots, reports or documentation before publishing.
-        No external project links have been invented.
-      </p>
+    <div class="evidence-slot">
+      <b>GitHub repository</b>
+      <a href="https://github.com/snigdha-rani345/SOC-Investigation-Projects"
+         target="_blank" rel="noopener noreferrer">
+        View repository ↗
+      </a>
     </div>
+  </div>
+
+  <p class="evidence-note">
+    View the investigation report and project evidence using the links above.
+  </p>
+</div>
   `;
 }
 
