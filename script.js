@@ -5,10 +5,10 @@
    ========================================================== */
 
 const PROFILE_LINKS = {
-  github: "",
-  linkedin: "",
-  tryhackme: "",
-  email: ""
+  github: "https://github.com/snigdha-rani345/",
+  linkedin: "https://www.linkedin.com/in/snigdharani-das-445146354/",
+  tryhackme: "https://tryhackme.com/p/SNIGDHARANIDAS",
+  email: "dsnigdharani130@gmail.com"
 };
 
 const PROJECTS = {
