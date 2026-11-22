@@ -32,7 +32,20 @@ const PROJECTS = {
     skills: ["Email header analysis", "IOC extraction and enrichment", "Threat intelligence research", "Phishing investigation", "Incident reporting"],
     outcome: "Created a phishing analysis report containing evidence, extracted IOCs and a malicious verdict for escalation.",
     relevance: "Email remains a common initial access route. The workflow mirrors a practical SOC triage process: validate the message, enrich indicators, assess risk and communicate a defensible verdict.",
-    evidence: ["Investigation report", "Email header and URL analysis screenshots", "Extracted IOC list"]
+    evidence: [
+  { 
+    label: "Investigation report", 
+    url: "https://github.com" 
+  },
+  { 
+    label: "Email header and URL analysis screenshots", 
+    url: "https://github.com" 
+  },
+  { 
+    label: "Extracted IOC list", 
+    url: "https://github.com" 
+  }
+]
   },
 
   powershell: {
