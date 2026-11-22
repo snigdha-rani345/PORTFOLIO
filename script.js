@@ -33,13 +33,12 @@ const PROJECTS = {
     evidence: [
   {
     title: "Investigation report",
-    url:"https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/01-phishing-account-compromise/splunk/investigation-queries.md"
+    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/01-phishing-account-compromise/splunk/investigation-queries.md"
   },
   {
     title: "Email analysis screenshots",
     url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/01-phishing-account-compromise/splunk/Email-Analysis.md"
-  },
-
+  }
 ]
   },
 
