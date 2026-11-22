@@ -148,6 +148,7 @@ const PROJECTS = {
     number: "005",
     category: "SOC ENVIRONMENT / DETECTION & RESPONSE LAB",
     title: "Logistics Company SOC Monitoring & Incident Response Lab",
+    repository: "https://github.com/snigdha-rani345/Logistics-SOC-Detection-Response",
     summary: "A simulated business SOC environment for centralised endpoint monitoring, alert investigation and response documentation across logistics systems.",
     why: "To simulate a real-world SOC environment for a logistics company and practise detecting and responding to endpoint and network threats using security monitoring tools.",
     objective: "Set up centralised log monitoring for simulated logistics servers, detect simulated cyberattacks and document step-by-step response actions.",
@@ -162,7 +163,44 @@ const PROJECTS = {
     skills: ["Endpoint monitoring", "Wazuh agent deployment", "SIEM alert triage", "Process and account investigation", "MITRE ATT&CK mapping", "Incident response documentation"],
     outcome: "Built a working SOC detection lab for a logistics environment, detected simulated endpoint attacks and created an incident response playbook.",
     relevance: "Organisations such as logistics providers rely on connected endpoints and operational systems. Centralised monitoring and repeatable response procedures help security teams investigate suspicious activity before it disrupts operations.",
-    evidence: ["Splunk security alert dashboard screenshots", "MITRE ATT&CK mapping summary", "Incident response playbook and triage notes"]
+    evidence: [
+    {
+      title: "Linux Authentication Logs",
+      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/1.logs/linux_auth_logs.txt"
+    },
+    {
+      title: "Windows Security Logs",
+      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/1.logs/windows_security_logs.txt"
+    },
+    {
+      title: "Web Access Logs",
+      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/1.logs/web_access_logs.txt"
+    },
+    {
+      title: "Brute Force Detection Rule",
+      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/2.rules/01_brute_force.spl"
+    },
+    {
+      title: "Investigation Screenshots",
+      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/3.screenshots/Investigation%20Screenshots.md"
+    },
+    {
+      title: "Incident Report",
+      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/4.report/incident_report.md"
+    },
+    {
+      title: "IP Blocking Automation",
+      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/5.automation/auto_block_ip.py"
+    },
+    {
+      title: "SOAR Brute Force Playbook",
+      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/6.SOAR_Playbook/01_bruteforce_playbook.md"
+    },
+    {
+      title: "SOAR Phishing Playbook",
+      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/6.SOAR_Playbook/02_phishing_playbook.md"
+    }
+  ]
   }
 };
 
