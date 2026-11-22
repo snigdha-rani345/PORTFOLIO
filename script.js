@@ -37,12 +37,9 @@ const PROJECTS = {
   },
   {
     title: "Email analysis screenshots",
-    url: "PASTE_YOUR_SCREENSHOT_LINK_HERE"
+    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/01-phishing-account-compromise/splunk/Email-Analysis.md"
   },
-  {
-    title: "Extracted IOC list",
-    url: "PASTE_YOUR_IOC_LINK_HERE"
-  }
+
 ]
   },
 
