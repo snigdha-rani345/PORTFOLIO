@@ -128,7 +128,20 @@ const PROJECTS = {
     skills: ["QRadar offense investigation", "AQL querying", "Network traffic analysis", "False-positive assessment", "IP reputation research", "Incident documentation"],
     outcome: "Assessed the DoS traffic source, distinguished potential threats from false positives and prepared an incident report with IP-blocking recommendations.",
     relevance: "High-volume traffic can affect service availability, but not every spike is malicious. Contextual analysis helps SOC teams avoid unnecessary escalation while identifying genuine availability threats.",
-    evidence: ["QRadar Offense Summary screenshot", "AQL search query and traffic-spike logs", "Attacker IP list and incident report"]
+    evidence: [
+  {
+    title: "Offense Analysis Report",
+    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/04-QRadar-DoS-Offense-Detection/investigation/Analyze-offense.md"
+  },
+  {
+    title: "Offense Details Screenshot",
+    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/04-QRadar-DoS-Offense-Detection/investigation/offense-details.png"
+  },
+  {
+    title: "QRadar Offense 677 Screenshot",
+    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/04-QRadar-DoS-Offense-Detection/investigation/qradar-offense-677.png"
+  }
+]
   },
 
   logistics: {
