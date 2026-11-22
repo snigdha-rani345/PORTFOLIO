@@ -336,12 +336,11 @@ function renderProject(projectKey) {
     ${evidence}
 
     <div class="evidence-slot">
-      <b>GitHub repository</b>
-      <a href="https://github.com/snigdha-rani345/SOC-Investigation-Projects"
-         target="_blank" rel="noopener noreferrer">
-        View repository ↗
-      </a>
-    </div>
+  <b>Project GitHub Repository</b>
+  <a href="${project.repository}" target="_blank" rel="noopener noreferrer">
+    View repository ↗
+  </a>
+</div>
   </div>
 
   <p class="evidence-note">
