@@ -35,14 +35,14 @@ const PROJECTS = {
     evidence: [
   { 
     label: "Investigation report", 
-    url: "https://github.com" 
+    url:"https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/01-phishing-account-compromise/splunk/investigation-queries.md"
   },
   { 
-    label: "Email header and URL analysis screenshots", 
-    url: "https://github.com" 
+    label: "Email header and URL analysis ", 
+    url:"https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/01-phishing-account-compromise/splunk/Email-Analysis.md"
   },
   { 
-    label: "Extracted IOC list", 
+    label: "Github Repositary", 
     url: "https://github.com" 
   }
 ]
