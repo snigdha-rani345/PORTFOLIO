@@ -204,7 +204,75 @@ function applyProfileLinks() {
     </ul>
   `;
 
-    const evidence = project.evidence.map(item => {
+    const modal = document.getElementById("projectModal");
+const modalContent = document.getElementById("modalContent");
+const modalCase = document.getElementById("modalCase");
+const toast = document.getElementById("toast");
+
+let lastFocusedElement = null;
+let toastTimer;
+
+/* ---------- NOTIFICATION ---------- */
+
+function showToast(message) {
+  if (!toast) return;
+
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2600);
+}
+
+/* ---------- PROFILE LINKS ---------- */
+
+function applyProfileLinks() {
+  document.querySelectorAll("[data-profile-link]").forEach(link => {
+    const key = link.dataset.profileLink;
+    const value = PROFILE_LINKS[key];
+
+    if (value && value.trim()) {
+      link.href = key === "email"
+        ? `mailto:${value.trim()}`
+        : value.trim();
+
+      link.classList.remove("is-placeholder");
+      link.removeAttribute("aria-disabled");
+    } else {
+      link.href = "#";
+      link.classList.add("is-placeholder");
+
+      link.setAttribute(
+        "aria-label",
+        `${key} link not configured yet`
+      );
+
+      if (key === "email") {
+        link.dataset.placeholderMessage =
+          "Add your email address in script.js to activate this link.";
+      }
+    }
+  });
+}
+
+/* ---------- PROJECT MODALS ---------- */
+
+function renderProject(projectKey) {
+  const project = PROJECTS[projectKey];
+  if (!project || !modalContent || !modalCase) return;
+
+  modalCase.textContent = `CASE FILE / ${project.number}`;
+
+  const list = items => `
+    <ul>
+      ${items.map(item => `<li>${item}</li>`).join("")}
+    </ul>
+  `;
+
+  const evidence = project.evidence.map(item => {
     const label = typeof item === "string" ? item : item.label;
     const url = typeof item === "string" ? "#" : item.url;
     return `
@@ -214,7 +282,6 @@ function applyProfileLinks() {
       </a>
     `;
   }).join("");
-
 
   modalContent.innerHTML = `
     <div class="modal-kicker">${project.category}</div>
@@ -266,28 +333,7 @@ function applyProfileLinks() {
 
       <div class="evidence-grid">
         ${evidence}
-
-        <div class="evidence-slot">
-          <b>GitHub repository</b>
-          <span>ADD REPOSITORY URL</span>
-        </div>
-
-        <div class="evidence-slot">
-          <b>Technical write-up</b>
-          <span>ADD WRITE-UP URL</span>
-        </div>
-
-        <div class="evidence-slot">
-          <b>Demo / documentation</b>
-          <span>ADD DEMO OR DOCS</span>
-        </div>
       </div>
-
-      <p class="evidence-note">
-        Evidence slots are intentional placeholders. Add your own repository
-        URLs, screenshots, reports or documentation before publishing.
-        No external project links have been invented.
-      </p>
     </div>
   `;
 }
