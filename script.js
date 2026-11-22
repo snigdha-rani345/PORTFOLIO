@@ -4,14 +4,12 @@
    Add your real profile URLs below.
    ========================================================== */
 
-
 const PROFILE_LINKS = {
   github: "https://github.com/snigdha-rani345/",
   linkedin: "https://www.linkedin.com/in/snigdharani-das-445146354/",
   tryhackme: "https://tryhackme.com/p/SNIGDHARANIDAS",
   email: "dsnigdharani130@gmail.com"
 };
-
 
 const PROJECTS = {
   phishing: {
@@ -32,20 +30,7 @@ const PROJECTS = {
     skills: ["Email header analysis", "IOC extraction and enrichment", "Threat intelligence research", "Phishing investigation", "Incident reporting"],
     outcome: "Created a phishing analysis report containing evidence, extracted IOCs and a malicious verdict for escalation.",
     relevance: "Email remains a common initial access route. The workflow mirrors a practical SOC triage process: validate the message, enrich indicators, assess risk and communicate a defensible verdict.",
-    evidence: [
-  { 
-    label: "Investigation report", 
-    url:"https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/01-phishing-account-compromise/splunk/investigation-queries.md"
-  },
-  { 
-    label: "Email header and URL analysis ", 
-    url:"https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/01-phishing-account-compromise/splunk/Email-Analysis.md"
-  },
-  { 
-    label: "Github Repositary", 
-    url: "https://github.com" 
-  }
-]
+    evidence: ["Investigation report", "Email header and URL analysis screenshots", "Extracted IOC list"]
   },
 
   powershell: {
@@ -160,75 +145,6 @@ function showToast(message) {
 
 /* ---------- PROFILE LINKS ---------- */
 
-
-      }
-    }
-  });
-}
-
-/* ---------- PROJECT MODALS ---------- */
-
-function renderProject(projectKey) {
-  const project = PROJECTS[projectKey];
-function applyProfileLinks() {
-  document.querySelectorAll("[data-profile-link]").forEach(link => {
-    const key = link.dataset.profileLink;
-    const value = PROFILE_LINKS[key];
-
-    if (value && value.trim()) {
-      link.href = key === "email"
-        ? `mailto:${value.trim()}`
-        : value.trim();
-
-      link.classList.remove("is-placeholder");
-      link.removeAttribute("aria-disabled");
-    } else {
-      link.href = "#";
-      link.classList.add("is-placeholder");
-
-      link.setAttribute(
-        "aria-label",
-        `${key} link not configured yet`
-      );
-
-      if (key === "email") {
-        link.dataset.placeholderMessage =
-          "Add your email address in script.js to activate this link.";
-  if (!project || !modalContent || !modalCase) return;
-
-  modalCase.textContent = `CASE FILE / ${project.number}`;
-
-  const list = items => `
-    <ul>
-      ${items.map(item => `<li>${item}</li>`).join("")}
-    </ul>
-  `;
-
-    const modal = document.getElementById("projectModal");
-const modalContent = document.getElementById("modalContent");
-const modalCase = document.getElementById("modalCase");
-const toast = document.getElementById("toast");
-
-let lastFocusedElement = null;
-let toastTimer;
-
-/* ---------- NOTIFICATION ---------- */
-
-function showToast(message) {
-  if (!toast) return;
-
-  toast.textContent = message;
-  toast.classList.add("show");
-
-  clearTimeout(toastTimer);
-
-  toastTimer = setTimeout(() => {
-    toast.classList.remove("show");
-  }, 2600);
-}
-
-/* ---------- PROFILE LINKS ---------- */
-
 function applyProfileLinks() {
   document.querySelectorAll("[data-profile-link]").forEach(link => {
     const key = link.dataset.profileLink;
@@ -262,6 +178,7 @@ function applyProfileLinks() {
 
 function renderProject(projectKey) {
   const project = PROJECTS[projectKey];
+
   if (!project || !modalContent || !modalCase) return;
 
   modalCase.textContent = `CASE FILE / ${project.number}`;
@@ -272,16 +189,12 @@ function renderProject(projectKey) {
     </ul>
   `;
 
-  const evidence = project.evidence.map(item => {
-    const label = typeof item === "string" ? item : item.label;
-    const url = typeof item === "string" ? "#" : item.url;
-    return `
-      <a href="${url}" target="_blank" rel="noopener noreferrer" class="evidence-slot" style="text-decoration: none; color: inherit; display: block;">
-        <b>${label}</b>
-        <span>${url !== "#" ? "VIEW ON GITHUB ↗" : "ADD LINK / SCREENSHOT"}</span>
-      </a>
-    `;
-  }).join("");
+  const evidence = project.evidence.map(item => `
+    <div class="evidence-slot">
+      <b>${item}</b>
+      <span>ADD LINK / SCREENSHOT</span>
+    </div>
+  `).join("");
 
   modalContent.innerHTML = `
     <div class="modal-kicker">${project.category}</div>
@@ -333,7 +246,28 @@ function renderProject(projectKey) {
 
       <div class="evidence-grid">
         ${evidence}
+
+        <div class="evidence-slot">
+          <b>GitHub repository</b>
+          <span>ADD REPOSITORY URL</span>
+        </div>
+
+        <div class="evidence-slot">
+          <b>Technical write-up</b>
+          <span>ADD WRITE-UP URL</span>
+        </div>
+
+        <div class="evidence-slot">
+          <b>Demo / documentation</b>
+          <span>ADD DEMO OR DOCS</span>
+        </div>
       </div>
+
+      <p class="evidence-note">
+        Evidence slots are intentional placeholders. Add your own repository
+        URLs, screenshots, reports or documentation before publishing.
+        No external project links have been invented.
+      </p>
     </div>
   `;
 }
@@ -500,3 +434,7 @@ if (
     revealObserver.observe(element);
   });
 }
+
+
+
+  
