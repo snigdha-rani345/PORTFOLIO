@@ -166,39 +166,39 @@ const PROJECTS = {
     evidence: [
     {
       title: "Linux Authentication Logs",
-      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/1.logs/linux_auth_logs.txt"
+      url: "https://github.com/snigdha-rani345/Logistics-SOC-Detection-Response/blob/main/1.logs/linux_auth_logs.txt"
     },
     {
       title: "Windows Security Logs",
-      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/1.logs/windows_security_logs.txt"
+      url: "https://github.com/snigdha-rani345/Logistics-SOC-Detection-Response/blob/main/1.logs/windows_security_logs.txt"
     },
     {
       title: "Web Access Logs",
-      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/1.logs/web_access_logs.txt"
+      url: "https://github.com/snigdha-rani345/Logistics-SOC-Detection-Response/blob/main/1.logs/web_access_logs.txt"
     },
     {
       title: "Brute Force Detection Rule",
-      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/2.rules/01_brute_force.spl"
+      url: "https://github.com/snigdha-rani345/Logistics-SOC-Detection-Response/blob/main/2.rules/01_brute_force.spl" 
     },
     {
       title: "Investigation Screenshots",
-      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/3.screenshots/Investigation%20Screenshots.md"
+      url: "https://github.com/snigdha-rani345/Logistics-SOC-Detection-Response/blob/main/3.screenshots/Investigation%20Screenshots.md"
     },
     {
       title: "Incident Report",
-      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/4.report/incident_report.md"
+      url: "https://github.com/snigdha-rani345/Logistics-SOC-Detection-Response/blob/main/4.report/incident_report.md"
     },
     {
       title: "IP Blocking Automation",
-      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/5.automation/auto_block_ip.py"
+      url: "https://github.com/snigdha-rani345/Logistics-SOC-Detection-Response/blob/main/5.automation/auto_block_ip.py"
     },
     {
       title: "SOAR Brute Force Playbook",
-      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/6.SOAR_Playbook/01_bruteforce_playbook.md"
+      url: "https://github.com/snigdha-rani345/Logistics-SOC-Detection-Response/blob/main/6.SOAR_Playbook/01_bruteforce_playbook.md"
     },
     {
       title: "SOAR Phishing Playbook",
-      url: "https://github.com/snigdha-rani345/YOUR-REPOSITORY/blob/main/6.SOAR_Playbook/02_phishing_playbook.md"
+      url: "https://github.com/snigdha-rani345/Logistics-SOC-Detection-Response/blob/main/6.SOAR_Playbook/02_phishing_playbook.md"
     }
   ]
   }
