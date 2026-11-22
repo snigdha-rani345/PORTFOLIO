@@ -94,7 +94,20 @@ const PROJECTS = {
     skills: ["Authentication log analysis", "Event correlation", "Brute-force detection", "IP reputation checks", "MITRE ATT&CK mapping", "Alert triage"],
     outcome: "Identified the brute-force source IP, assessed whether access was gained and created an alert triage report with containment steps.",
     relevance: "Repeated authentication failures can signal credential attacks. Correlating failures with successful logins helps security teams prioritise possible account compromise and respond appropriately.",
-    evidence: ["SIEM search query and alert screenshots", "Timeline of failed versus successful logins", "Attacker IP reputation report"]
+    evidence: [
+  {
+    title: "Authentication Event Log",
+    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/03-Brute-Force-Login-Investigation/Evidence/Authentication-Event.txt"
+  },
+  {
+    title: "Wazuh SSH Failed Login Screenshot",
+    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/03-Brute-Force-Login-Investigation/Evidence/wazuh-ssh-failed-login.png"
+  },
+  {
+    title: "Wazuh Windows Failed Login Screenshot",
+    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/03-Brute-Force-Login-Investigation/Evidence/wazuh-windows-failed-login.png"
+  }
+]
   },
 
   qradar: {
