@@ -97,7 +97,7 @@ const PROJECTS = {
     evidence: [
   {
     title: "Authentication Event Log",
-    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/03-Brute-Force-Login-Investigation/Evidence/Authentication-Event.txt"
+    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/03-Brute-Force-Login-Investigation/Ivestigation/Wazuh-Event-Analysis.md"
   },
   {
     title: "Wazuh SSH Failed Login Screenshot",
