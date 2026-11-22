@@ -60,7 +60,20 @@ const PROJECTS = {
     skills: ["Windows event log analysis", "PowerShell investigation", "Base64 decoding", "Process and command-line analysis", "IOC identification"],
     outcome: "Identified the suspicious command, extracted the C2 URL as an IOC and wrote an incident summary for containment.",
     relevance: "Encoded PowerShell can obscure attacker activity. Recognising suspicious execution patterns and correlating endpoint telemetry is useful for detecting malicious scripts and living-off-the-land behaviour.",
-    evidence: ["SIEM search query screenshots", "Decoded CyberChef script output", "Extracted IOC list (IP, URL and file path)"]
+    evidence: [
+  {
+    title: "Event Analysis",
+    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/02-Suspicious-Powershell/Investigation/Event-Analysis.md"
+  },
+  {
+    title: "Splunk Investigation",
+    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/02-Suspicious-Powershell/Investigation/Splunk-Investigation.md"
+  },
+  {
+    title: "PowerShell Event Log",
+    url: "https://github.com/snigdha-rani345/SOC-Investigation-Projects/blob/main/projects/02-Suspicious-Powershell/evidence/Powershell-Event.txt"
+  }
+]
   },
 
   bruteforce: {
