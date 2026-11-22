@@ -203,11 +203,13 @@ function renderProject(projectKey) {
   `;
 
   const evidence = project.evidence.map(item => `
-    <div class="evidence-slot">
-      <b>${item}</b>
-      <span>ADD LINK / SCREENSHOT</span>
-    </div>
-  `).join("");
+  <div class="evidence-slot">
+    <b>${item.title}</b>
+    <a href="${item.url}" target="_blank" rel="noopener noreferrer">
+      View evidence ↗
+    </a>
+  </div>
+`).join("");
 
   modalContent.innerHTML = `
     <div class="modal-kicker">${project.category}</div>
