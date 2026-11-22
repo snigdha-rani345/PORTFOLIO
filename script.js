@@ -160,6 +160,16 @@ function showToast(message) {
 
 /* ---------- PROFILE LINKS ---------- */
 
+
+      }
+    }
+  });
+}
+
+/* ---------- PROJECT MODALS ---------- */
+
+function renderProject(projectKey) {
+  const project = PROJECTS[projectKey];
 function applyProfileLinks() {
   document.querySelectorAll("[data-profile-link]").forEach(link => {
     const key = link.dataset.profileLink;
@@ -184,16 +194,6 @@ function applyProfileLinks() {
       if (key === "email") {
         link.dataset.placeholderMessage =
           "Add your email address in script.js to activate this link.";
-      }
-    }
-  });
-}
-
-/* ---------- PROJECT MODALS ---------- */
-
-function renderProject(projectKey) {
-  const project = PROJECTS[projectKey];
-
   if (!project || !modalContent || !modalCase) return;
 
   modalCase.textContent = `CASE FILE / ${project.number}`;
@@ -204,12 +204,17 @@ function renderProject(projectKey) {
     </ul>
   `;
 
-  const evidence = project.evidence.map(item => `
-    <div class="evidence-slot">
-      <b>${item}</b>
-      <span>ADD LINK / SCREENSHOT</span>
-    </div>
-  `).join("");
+    const evidence = project.evidence.map(item => {
+    const label = typeof item === "string" ? item : item.label;
+    const url = typeof item === "string" ? "#" : item.url;
+    return `
+      <a href="${url}" target="_blank" rel="noopener noreferrer" class="evidence-slot" style="text-decoration: none; color: inherit; display: block;">
+        <b>${label}</b>
+        <span>${url !== "#" ? "VIEW ON GITHUB ↗" : "ADD LINK / SCREENSHOT"}</span>
+      </a>
+    `;
+  }).join("");
+
 
   modalContent.innerHTML = `
     <div class="modal-kicker">${project.category}</div>
